@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidSampleCode.iml" filepath="$PROJECT_DIR$/AndroidSampleCode.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cooldevicelibrary/cooldevicelibrary.iml" filepath="$PROJECT_DIR$/cooldevicelibrary/cooldevicelibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidSampleCode.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidSampleCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidSampleCode.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidSampleCode.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidSampleCode.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidSampleCode.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidSampleCode.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidSampleCode.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidSampleCode.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidSampleCode.app.unitTest.iml" />
     </modules>
   </component>
 </project>

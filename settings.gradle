@@ -1,1 +1,1 @@
-include ':app', ':cooldevicelibrary'
+include ':app'
