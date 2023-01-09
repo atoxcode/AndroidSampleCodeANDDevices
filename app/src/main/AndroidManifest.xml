@@ -12,6 +12,14 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".ResultShow"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
         <service android:name=".ble.BleReceivedService" />
 
         <activity
@@ -29,7 +37,7 @@
             android:name=".activity.Main2Activity"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".PairConnectActivity"></activity>
+        <activity android:name=".PairConnectActivity" />
     </application>
 
 </manifest>

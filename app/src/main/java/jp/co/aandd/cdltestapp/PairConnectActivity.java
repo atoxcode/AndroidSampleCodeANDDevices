@@ -11,10 +11,11 @@ import android.widget.Toast;
 import android.app.Activity;
 
 import jp.co.aandd.cdltestapp.ble.BleReceivedService;
+import jp.co.aandd.cdltestapp.ble.ResultShow;
 
 public class PairConnectActivity extends AppCompatActivity {
 
-    Button pairButton, dataButton;
+    Button pairButton, dataButton, showResult;
     String operation = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,8 +57,23 @@ public class PairConnectActivity extends AppCompatActivity {
 
             }
         });
+
+        showResult = (Button) findViewById(R.id.getData2);
+        showResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("AD","User has clicked on the data button");
+                operation = "data";
+                BleReceivedService.getInstance().operation = "data";
+                Intent resultIntent = new Intent(getApplicationContext(), ResultShow.class);
+                resultIntent.putExtra("operation", "data");
+                startActivity(resultIntent);
+            }
+        });
+
         pairButton.setVisibility(View.VISIBLE);
         dataButton.setVisibility(View.VISIBLE);
+        showResult.setVisibility(View.VISIBLE);
 
 
 
