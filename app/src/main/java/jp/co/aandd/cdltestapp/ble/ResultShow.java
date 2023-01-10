@@ -16,11 +16,11 @@ public class ResultShow extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_show);
 
-        Intent resultIntent = getIntent();
-        resultIntent.getStringExtra("operation");
-
-        sysResult = (TextView) findViewById(R.id.sysResult);
-        diasResult = (TextView) findViewById(R.id.diasResult);
-        pulseResult = (TextView) findViewById(R.id.pulseResult);
+//        Intent resultIntent = getIntent();
+//        resultIntent.getStringExtra("operation");
+//
+//        sysResult = (TextView) findViewById(R.id.sysResult);
+//        diasResult = (TextView) findViewById(R.id.diasResult);
+//        pulseResult = (TextView) findViewById(R.id.pulseResult);
     }
 }

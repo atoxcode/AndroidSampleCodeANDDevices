@@ -10,6 +10,7 @@ import android.bluetooth.BluetoothDevice;
 import android.widget.Toast;
 import android.app.Activity;
 
+import jp.co.aandd.cdltestapp.activity.MainActivity;
 import jp.co.aandd.cdltestapp.ble.BleReceivedService;
 import jp.co.aandd.cdltestapp.ble.ResultShow;
 
@@ -63,20 +64,21 @@ public class PairConnectActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d("AD","User has clicked on the data button");
-                operation = "data";
-                BleReceivedService.getInstance().operation = "data";
+//                operation = "data";
+//                BleReceivedService.getInstance().operation = "data";
                 Intent resultIntent = new Intent(getApplicationContext(), ResultShow.class);
-                resultIntent.putExtra("operation", "data");
+//                resultIntent.putExtra("operation", "data");
                 startActivity(resultIntent);
+                finish();
+
+//                Intent intent = new Intent(PairConnectActivity.this, ResultShow.class);
+//                startActivity(intent);
             }
         });
 
         pairButton.setVisibility(View.VISIBLE);
         dataButton.setVisibility(View.VISIBLE);
         showResult.setVisibility(View.VISIBLE);
-
-
-
 
     }
 

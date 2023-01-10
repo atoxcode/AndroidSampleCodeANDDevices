@@ -46,6 +46,8 @@ import jp.co.aandd.cdltestapp.R;
 import jp.co.aandd.cdltestapp.ble.BleDeviceAdapter;
 import jp.co.aandd.cdltestapp.ble.BleDeviceItem;
 import jp.co.aandd.cdltestapp.ble.BleReceivedService;
+import jp.co.aandd.cdltestapp.ble.ResultShow;
+
 import android.bluetooth.le.ScanCallback;
 import android.bluetooth.le.ScanSettings;
 import android.os.ParcelUuid;
@@ -71,7 +73,7 @@ public class MainActivity extends Activity {
     private boolean mIsBleReceiver = false;
     private boolean mIsBindBleReceivedServivce = false;
     private String operation;
-    Button pairButton, dataButton;
+    Button pairButton, dataButton, resultButton;
     static final int BLUETOOTH_ACTION_CHOSEN = 0;
     public static final UUID BloodPressureService = uuidFromShortString("1810");
     public static final UUID WeightScaleService = uuidFromShortString("181d");
@@ -133,8 +135,26 @@ public class MainActivity extends Activity {
 
             }
         });
+
+        resultButton = (Button) findViewById(R.id.getData2);
+        resultButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Log.d("AD","User has clicked on the data button");
+//                operation = "data";
+//                BleReceivedService.getInstance().operation = "data";
+//                enabledButton();
+                Intent intent = new Intent(MainActivity.this, ResultShow.class);
+                startActivity(intent);
+//                Intent resultIntent = new Intent(getApplicationContext(), ResultShow.class);
+//                resultIntent.putExtra("operation", "data");
+//                startActivity(resultIntent);
+            }
+        });
+
         pairButton.setVisibility(View.INVISIBLE);
         dataButton.setVisibility(View.INVISIBLE);
+        resultButton.setVisibility(View.VISIBLE);
 
 
     }
@@ -147,6 +167,7 @@ public class MainActivity extends Activity {
         isStartedScan = false;
         pairButton.setVisibility(View.INVISIBLE);
         dataButton.setVisibility(View.INVISIBLE);
+        resultButton.setVisibility(View.VISIBLE);
         //enabledButton();
         doBindBleReceivedService();
     }
